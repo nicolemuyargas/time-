@@ -107,7 +107,97 @@
                 countriesOption += "<option>"+ countries[i] +"</option>";
                   document.getElementById("timezone").innerHTML = countriesOption;
                  }document.getElementById("timezone").style.fontSize = "16.4px";
-            
+       
+       
+             function convert(){
+                let hours = Number(document.getElementById("hour").value)
+                let minutes = Number(document.getElementById("minutes").value)
+                let country = document.getElementById("timezone").value
+                let resultDiv=document.getElementById("result")
+
+
+                let UtcTwoHour1= hours +18;
+                let UtcTwoHour2= hours-6;
+                let UtcThreeHour1= hours - 5;
+                let UtcThreeHour2= hours + 19;
+                let UtcFourHour1= hours-4;
+                let UtcFourHour2= hours + 20;
+                let UtcFiveHour1=hours-3;
+                let UtcFiveHour2= hours+21;
+                let UtcSixHour1=hours-2;
+                let UtcSixHour2=hours+22;
+                 
+                  if(country=== "Eastern European Time UTC +2" && hours<6 ||
+                 country=== "Israel Standard Time UTC +2" && hours<6){
+                 resultDiv.innerHTML = `${UtcTwoHour1} : ${minutes}`
+                }else if (country=== "Eastern European Time UTC +2" && hours>5 || 
+                 country=== "Israel Standard Time UTC +2" && hours>5){
+                 resultDiv.innerHTML = `${UtcTwoHour2} : ${minutes}`
+                }else{}  
+
+                if (country === "Arabia Standard Time UTC +3" &&  hours >4 ||
+                  country==="Moscow Standard Time	UTC +3" &&  hours >4 ||
+                  country==="Turkey Time UTC +3" &&  hours >4) {
+                  resultDiv.innerHTML = `${UtcThreeHour1} : ${minutes}`
+                }else if(country === "Arabia Standard Time UTC +3" &&  hours < 5 ||
+                  country==="Moscow Standard Time UTC +3" &&  hours < 5 ||
+                  country==="Turkey Time UTC +3" && hours < 5 ){
+                  resultDiv.innerHTML = `${UtcThreeHour2} : ${minutes}`
+                }else{}   
+
+                if(country==="Armenia Time UTC +4" &&  hours>3  ||
+                 country=== "Azerbaijan Time UTC +4" && hours>3 || 
+                 country=== "Georgia Standard Time UTC +4" &&  hours>3  ||
+                  country==="Gulf Standard Time UTC +4" &&  hours>3){
+                  resultDiv.innerHTML = `${UtcFourHour1} : ${minutes}`
+                }else if (country==="Armenia Time UTC +4" && hours<4  || 
+                country==="Azerbaijan Time UTC +4" && hours<4 ||
+                 country=== "Georgia Standard Time UTC +4" && hours<4 || 
+                 country=== "Gulf Standard Time UTC +4" && hours<4){
+                  resultDiv.innerHTML = `${UtcFourHour2} : ${minutes}`
+                }else{}
+
+                if(country==="Aqtobe Time UTC +5" && hours>2 ||
+                 country==="Oral Time UTC +5" && hours>2 || 
+                 country=== "Pakistan Standard Time UTC +5" && hours>2 ||
+                  country==="Tajikistan Time UTC +5" && hours>2 || 
+                  country==="Maldives Time UTC +5" && hours>2 
+                ||country==="Tajikistan Time UTC +5" && hours>2 ||
+                 country==="Uzbekistan Time UTC +5" && hours>2 || 
+                 country=== "Turkmenistan Time UTC +5" && hours>2 ||
+                  country==="Yekaterinburg Time UTC +5" && hours>2 || 
+                  country==="Yekaterinburg Time UTC +5" && hours>2){
+                  resultDiv.innerHTML = `${UtcFiveHour1} : ${minutes}`
+                }else if(country==="Aqtobe Time UTC +5" && hours<3 ||
+                 country==="Oral Time UTC +5" && hours<3 ||
+                  country=== "Pakistan Standard Time UTC +5" && hours<3 || 
+                  country==="Tajikistan Time UTC +5" && hours<3 || 
+                  country==="Maldives Time UTC +5" && hours<3
+                ||country==="Tajikistan Time UTC +5" && hours<3 || 
+                country==="Uzbekistan Time UTC +5" && hours<3 || 
+                country=== "Turkmenistan Time UTC +5" && hours<3 || 
+                country==="Yekaterinburg Time UTC +5" && hours<3 || 
+                country==="Yekaterinburg Time UTC +5" && hours<3 ){
+                  resultDiv.innerHTML = `${UtcFiveHour2} : ${minutes}`
+                } else{}
+
+                if(country==="Alma-Ata Time UTC +6" && hours>1 ||
+                 country==="Bangladesh Standard Time UTC +6" && hours>1 ||
+                  country==="Bhutan Time UTC +6" && hours>1 ||
+                   country==="Kyrgyzstan Time	UTC +6" && hours>1 
+                ||country==="Omsk Standard Time UTC +6" && hours>1 ||
+                 country==="Qyzylorda Time UTC +6" && hours>1){
+                  resultDiv.innerHTML = `${UtcSixHour1} : ${minutes}`
+                  } 
+                else if(country==="Alma-Ata Time UTC +6" && hours <2 ||
+                 country==="Bangladesh Standard Time UTC +6" ||
+                  country==="Bhutan Time UTC +6" && hours <2 ||
+                   country==="Kyrgyzstan Time UTC +6" && hours <2 
+                ||country==="Omsk Standard Time UTC +6" && hours <2 ||
+                 country==="Qyzylorda Time UTC +6" && hours <2){
+                  resultDiv.innerHTML = `${UtcSixHour2} : ${minutes}`
+                  }
+                else{}
         
     </body>
 </html>
