@@ -41,6 +41,13 @@
         for(let i = 0; i<24; i++){
          options += "<option>"+ i +"</option>";
           }document.getElementById("hour").innerHTML = options;  
+       
+         let  minutes = 60;
+   let minutesOption = "";
+       for(let j = 0 ; j <=minutes; j++){
+         minutesOption += "<option>"+ j +"</option>";
+          }document.getElementById("minutes").innerHTML = minutesOption; 
+          document.getElementById("minutes").style.fontSize = "16.4px";
         
     </body>
 </html>
