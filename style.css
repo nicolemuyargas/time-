@@ -6,48 +6,47 @@
 }
 
 main{
-    height: 100vh;
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(4.JPG);
-    background-size: cover;
-    background-position: center;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+   height: 100vh;
+   background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(4.JPG);
+   background-size: cover;
+   background-position: center;
+   display:flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .glass {
-    background: #FFFFFA ;
-    min-height: 80vh;
-    width: 60%;
-    background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.3),
-        rgba(255, 255, 255, 0.3)
-    );
-    border-radius: 2rem;
-    z-index: 2;
-    backdrop-filter: blur(1rem);
-    
+   background: #FFFFFA ;
+   min-height: 80vh;
+   width: 60%;
+   background: linear-gradient(
+       to right bottom,
+       rgba(255, 255, 255, 0.3),
+       rgba(255, 255, 255, 0.3)
+   );
+   border-radius: 2rem;
+   z-index: 2;
+   backdrop-filter: blur(1rem);  
 }
 
 .ph{
-    margin-top: 40px;
-    font-size: 40px;
-    text-align: center;
+   margin-top: 40px;
+   font-size: 40px;
+   text-align: center;
 }
 
 .hmc{
    text-align: center;
-    font-size: 40px;
+   font-size: 40px;
 }
+
 .button button{
-    height: 48px;
-    color:black;
-    font-size: 18px;
-    cursor: pointer;
-    background: linear-gradient(90deg,#D1D9D9,#BBBBBB);
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
-   
+   height: 48px;
+   color:black;
+   font-size: 18px;
+   cursor: pointer;
+   background: linear-gradient(90deg,#D1D9D9,#BBBBBB);
+   padding: 10px 20px;
+   margin-top: 10px;
+   border-radius: 5px;
 }
