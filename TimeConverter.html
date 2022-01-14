@@ -48,6 +48,66 @@
          minutesOption += "<option>"+ j +"</option>";
           }document.getElementById("minutes").innerHTML = minutesOption; 
           document.getElementById("minutes").style.fontSize = "16.4px";
+    
+   let countries =
+            ["Arabia Standard Time UTC +3",
+             "Afghanistan Time UTC +4:30",
+             "Alma-Ata Time UTC +6",
+             "Armenia Time UTC +4",
+             "Anadyr Time UTC +12",
+             "Aqtobe Time UTC +5",
+             "Azerbaijan Time UTC +4",
+             "Brunei Darussalam Time UTC +8",
+             "Bangladesh Standard Time UTC +6",
+             "Bhutan Time UTC +6",
+             "Choibalsan Time UTC +8",
+             "China Standard Time UTC +8",
+             "Eastern European Time UTC +2",
+             "Georgia Standard Time UTC +4",
+             "Gulf Standard Time UTC +4",
+             "Hong Kong Time UTC +8",
+             "Hovd Time UTC +7",
+             "Indochina Time UTC +7",
+             "Irkutsk Time UTC +8",
+             "Israel Standard Time UTC +2",
+             "Japan Standard Time UTC +9",
+             "Kyrgyzstan Time UTC +6",
+             "Krasnoyarsk Time UTC +7",
+             "Korea Standard Time UTC +9",
+             "Magadan Time UTC +11",
+             "Myanmar Time UTC +6:30",
+             "Moscow Standard Time UTC +3",
+             "Maldives Time UTC +5",
+             "Malaysia Time UTC +8",
+             "Novosibirsk Time UTC +7",
+             "Omsk Standard Time UTC +6",
+             "Oral Time UTC +5",
+             "Kamchatka Time UTC +12",
+             "Pakistan Standard Time UTC +5",
+             "Qyzylorda Time UTC +6",
+             "Sakhalin Time UTC +11",
+             "Singapore Time UTC +8",
+             "Srednekolymsk Time UTC +11",
+             "Tajikistan Time UTC +5",
+             "East Timor Time UTC +9",
+             "Turkmenistan Time UTC +5",
+             "Turkey Time UTC +3",
+             "Ulaanbaatar Time UTC +8",
+             "Uzbekistan Time UTC +5",
+             "Vladivostok Time UTC +10",
+             "Western Indonesian Time UTC +7",
+             "Eastern Indonesian Time UTC +9",
+             "Central Indonesian Time UTC +8",
+             "Yakutsk Time UTC +9",
+             "Yekaterinburg Time UTC +5",
+              ];
+            
+            let countriesOption =""
+              for (let i = 0; i < countries.length; i++) {
+                countriesOption += "<option>"+ countries[i] +"</option>";
+                  document.getElementById("timezone").innerHTML = countriesOption;
+                 }document.getElementById("timezone").style.fontSize = "16.4px";
+            
         
     </body>
 </html>
