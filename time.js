@@ -102,7 +102,7 @@ let options = "";
                 }
               
                 converted = calculateConversion(converted)
-                resultDiv.innerHTML = `${converted.time} : ${converted.minuto}`;
+                resultDiv.innerHTML = `${converted.time} : ${String(converted.minuto).padStart(2,'0')}`;
               }
               
               function calculateConversion(conversionObject) {
