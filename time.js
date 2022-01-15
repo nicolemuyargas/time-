@@ -96,13 +96,13 @@ let options = "";
                 let converted = { time :origin.time + offSet, minuto: origin.minuto }
                 if (!isNaN(secondOffSet) && secondIndex >= 0) {
                   converted = { 
-                    time: origin.time + 3,
+                    time: origin.time + 4,
                     minuto: origin.minuto + secondOffSet,
                   }
                 }
               
                 converted = calculateConversion(converted)
-                resultDiv.innerHTML = `${converted.time} : ${minutes}`;
+                resultDiv.innerHTML = `${converted.time} : ${converted.minuto}`;
               }
               
               function calculateConversion(conversionObject) {
@@ -110,6 +110,11 @@ let options = "";
                   conversionObject.time += 24
                 } else if (conversionObject.time > 23) {
                   conversionObject.time -= 24
+                }
+                else if (conversionObject.minuto > 60){
+                  conversionObject.minuto -= 60
+                  conversionObject.time += 1
+
                 }
               
                 return conversionObject
