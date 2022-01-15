@@ -88,24 +88,29 @@ let options = "";
                        
                 let offSet = Number(country.slice(index))
                 
-                let secondIndex = country.lastIndexOf(':')
-                let secondOffSet = Number(country.slice(secondIndex));
+                let secondIndex = country.lastIndexOf(':') + 1; 
+                let secondOffSet = Number(country.slice(secondIndex) );
+
 
 
                 let converted = { time :origin.time + offSet, minuto: origin.minuto }
-                let convertedTwo = { time :origin.time + 3, minuto: origin.minuto + secondOffSet }
-
-                if (converted.time < 0 ) {
-                  converted.time = 24 + converted.time 
+                if (!isNaN(secondOffSet) && secondIndex >= 0) {
+                  converted = { 
+                    time: origin.time + 3,
+                    minuto: origin.minuto + secondOffSet,
+                  }
                 }
-                else if (converted.time > 23){
-                  converted.time -= 24
-                } 
-
-                
-                resultDiv.innerHTML = `${converted.time} : ${minutes}`
-           
-
-
+              
+                converted = calculateConversion(converted)
+                resultDiv.innerHTML = `${converted.time} : ${minutes}`;
               }
-          
+              
+              function calculateConversion(conversionObject) {
+                if (conversionObject.time < 0) {
+                  conversionObject.time += 24
+                } else if (conversionObject.time > 23) {
+                  conversionObject.time -= 24
+                }
+              
+                return conversionObject
+              }
